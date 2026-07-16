@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { sendContactEmail } from "../services/emailService";
 import type { FormData } from "../types";
-import type { SendStatus } from "../services/emailService";
+//import type { SendStatus } from "../services/emailService";
 
 const INITIAL_FORM: FormData = { nome: "", email: "", mensagem: "" };
 
 interface UseContactFormReturn {
   formData:    FormData;
-  status:      SendStatus;
+  //status:      SendStatus;
   errorMsg:    string | null;
   handleField: (key: keyof FormData) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   handleSubmit: () => Promise<void>;
@@ -16,7 +16,7 @@ interface UseContactFormReturn {
 
 export function useContactForm(): UseContactFormReturn {
   const [formData, setFormData] = useState<FormData>(INITIAL_FORM);
-  const [status,   setStatus]   = useState<SendStatus>("idle");
+  //const [status,   setStatus]   = useState<SendStatus>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleField =
