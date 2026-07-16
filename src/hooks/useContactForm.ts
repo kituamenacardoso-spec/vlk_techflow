@@ -38,21 +38,21 @@ export function useContactForm(): UseContactFormReturn {
     }
 
     setErrorMsg(null);
-    setStatus("sending");
+    //setStatus("sending");
 
     try {
       await sendContactEmail({ nome, email, mensagem });
-      setStatus("success");
+      //setStatus("success");
       setFormData(INITIAL_FORM);
     } catch (err) {
       console.error("Erro ao enviar email:", err);
       setErrorMsg("Não foi possível enviar a mensagem. Tenta novamente.");
-      setStatus("error");
+      //setStatus("error");
     }
   };
 
   const reset = () => {
-    setStatus("idle");
+    //setStatus("idle");
     setErrorMsg(null);
     setFormData(INITIAL_FORM);
   };
