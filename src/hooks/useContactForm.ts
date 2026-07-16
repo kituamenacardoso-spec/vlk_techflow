@@ -57,5 +57,5 @@ export function useContactForm(): UseContactFormReturn {
     setFormData(INITIAL_FORM);
   };
 
-  return { formData, status, errorMsg, handleField, handleSubmit, reset };
+  return { formData, errorMsg, handleField, handleSubmit, reset };
 }
