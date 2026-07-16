@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendContactEmail } from "../services/emailService";
+//import { sendContactEmail } from "../services/emailService";
 import type { FormData } from "../types";
 //import type { SendStatus } from "../services/emailService";
 
@@ -40,7 +40,7 @@ export function useContactForm(): UseContactFormReturn {
     setErrorMsg(null);
     //setStatus("sending");
 
-    try {
+   /* try {
       await sendContactEmail({ nome, email, mensagem });
       //setStatus("success");
       setFormData(INITIAL_FORM);
@@ -48,7 +48,7 @@ export function useContactForm(): UseContactFormReturn {
       console.error("Erro ao enviar email:", err);
       setErrorMsg("Não foi possível enviar a mensagem. Tenta novamente.");
       //setStatus("error");
-    }
+    }*/
   };
 
   const reset = () => {
